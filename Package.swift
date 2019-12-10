@@ -5,9 +5,17 @@ import PackageDescription
 let package = Package(
     name: "TTTAttributedLabel",
     products: [
-        .library(name: "TTTAttributedLabel", targets: ["TTTAttributedLabel"])
+        .library(
+            name: "TTTAttributedLabel",
+            targets: ["TTTAttributedLabel"]
+        )
     ],
     targets: [
-        .target(name: "TTTAttributedLabel", dependencies: [], path: "Sources"),
+        .target(
+            name: "TTTAttributedLabel",
+            path: ".",
+            sources: ["Sources"],
+            publicHeadersPath: "Sources"
+        ),
     ]
 )
